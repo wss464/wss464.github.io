@@ -10,6 +10,22 @@
 
   gtag('config', 'AW-801440311');
 </script>
+<!-- Event snippet for مطلوب موظف conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-801440311/z-tACOD_kaYBELeElP4C',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
   <!-- Site made with Mobirise Website Builder v4.10.5, https://mobirise.com -->
   <meta charset="UTF-8">
